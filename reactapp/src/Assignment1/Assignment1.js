@@ -11,6 +11,22 @@ import "./Assignment1.css";
 
 function Assignment1() {
   const tasksArray = ["Task1", "Task2", "Task3", "Task4"];
+  const userCardArray=[
+    {  name1:"Varun",
+    email:"varun@gmail.com",
+    avatarURL:"https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+    },
+    {
+      name1:"Shiv",
+      email:"shiv@gmail.com",
+      avatarURL:"https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk"
+    },
+    {  name1:"Thakur",
+    email:"thakur@gmail.com",
+    avatarURL:"https://placebeard.it/250/250"
+
+    }
+]
   return (
     <>
       <div id="mainass1">
@@ -20,21 +36,13 @@ function Assignment1() {
         </div>
         <div id="q2">
           <h3>Question2</h3>
-          <UserCard
-            name="Varun"
-            email="varun@gmail.com"
-            avatarURL="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
-          />
-          <UserCard
-            name="Shiv"
-            email="shiv@gmail.com"
-            avatarURL="https://i.pravatar.cc/250?u=mail@ashallendesign.co.uk"
-          />
-          <UserCard
-            name="Thakur"
-            email="thakur@gmail.com"
-            avatarURL="https://placebeard.it/250/250"
-          />
+       
+          {
+            userCardArray.map((userinfo)=>(
+              <UserCard userinfo={userinfo}/>
+            ))
+          }
+         
         </div>
         <div id="q3">
           <h3>Question3</h3>
