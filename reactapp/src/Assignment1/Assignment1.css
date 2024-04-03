@@ -1,0 +1,46 @@
+#mainass1 {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid black;
+  margin: 20px;
+}
+#q1 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 20px;
+}
+#q2 {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  margin: 20px;
+}
+#q3 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+}
+#q4 {
+  display: column;
+  flex-direction: row;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+}
+#q5 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+}
+#q6 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+}
