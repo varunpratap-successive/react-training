@@ -4,12 +4,12 @@
 
 import React from "react";
 
-function UserCard({ userinfo }) {
+function UserCard({ name,email,avatarURL }) {
   return (
     <div>
-      <h1>{userinfo.name}</h1>
-      <h2>{userinfo.email}</h2>
-      <img src={userinfo.avatarURL} alt="alt1" />
+      <h1>{name}</h1>
+      <h2>{email}</h2>
+      <img src={avatarURL} alt="alt1" />
     </div>
   );
 }

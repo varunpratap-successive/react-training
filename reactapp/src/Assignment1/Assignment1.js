@@ -39,7 +39,7 @@ function Assignment1() {
        
           {
             userCardArray.map((userinfo)=>(
-              <UserCard userinfo={userinfo}/>
+              <UserCard name={userinfo.name1} email={userinfo.email} avatarURL={userinfo.avatarURL}/>
             ))
           }
          
