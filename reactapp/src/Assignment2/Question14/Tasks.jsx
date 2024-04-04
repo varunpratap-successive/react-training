@@ -7,12 +7,13 @@
 
 import React, { useCallback, useState } from "react";
 import Task from "./Task";
+import './Task.css'
 
 const taskArray = [
-  { task: "Task1", color: "green", button: "Complete " },
-  { task: "Task2", color: "green", button: "Complete " },
-  { task: "Task3", color: "green", button: "Complete " },
-  { task: "Task4", color: "green", button: "Complete " },
+  { task: "Task1",  button: "Complete " },
+  { task: "Task2",  button: "Complete " },
+  { task: "Task3",  button: "Complete " },
+  { task: "Task4",  button: "Complete " },
 ];
 
 function Tasks() {
@@ -21,16 +22,13 @@ function Tasks() {
     (index) => {
       const newArray = [...taskDone];
       newArray[index].button = "Completed";
-      newArray[index].color = "blue";
       setTaskDone(newArray);
     },
     [taskDone]
   );
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
+    <div id="tasksid" >
       {taskDone.map((element, index) =>( <Task key={index} index={index} element={element} updateTask={updateTask} />
       ))}
     </div>

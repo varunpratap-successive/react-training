@@ -1,19 +1,12 @@
-
 import React from "react";
+import "./Task.css";
 
-function Task({ index,element, updateTask}) {
+function Task({ index, element, updateTask }) {
   return (
     <>
-      <div style={{display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        }} >
+      <div id="taskid">
         <p>{element.task}</p>
-        <button style={{
-            color: element.color,
-          }}
-          onClick={() => updateTask(index)}
-        >
+        <button id="btnid" onClick={() => updateTask(index)}>
           {element.button}
         </button>
       </div>

@@ -11,31 +11,34 @@ import React, { useReducer } from "react";
 function Voting() {
   const reducer = (state, action) => {
     switch (action.type) {
-      case "INCREMENT":
-        return { count: state.count + 1 };
+      case "INCREMENTVIRAT":
+        return { ...state, viratcount: state.viratcount + 1 };
+      case "INCREMENTROHIT":
+        return { ...state, rohitcount: state.rohitcount + 1 };
+      case "INCREMENTDHONI":
+        return { ...state, dhonicount: state.dhonicount + 1 };
       default:
         return state;
     }
   };
-  const initialState = { count: 0 };
-  const [stateVirat, dispatch1] = useReducer(reducer, initialState);
-  const [stateRohit, dispatch2] = useReducer(reducer, initialState);
-  const [stateDhoni, dispatch3] = useReducer(reducer, initialState);
+  const initialState = { viratcount: 0, rohitcount: 0, dhonicount: 0 };
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div>
-      <p>ViratCount: {stateVirat.count}</p>
-      <button onClick={() => dispatch1({ type: "INCREMENT" })}>
+      <p>ViratCount: {state.viratcount}</p>
+      <button onClick={() => dispatch({ type: "INCREMENTVIRAT" })}>
         Increment Vote for Virat
       </button>
-      <p>Rohitcount: {stateRohit.count}</p>
-      <button onClick={() => dispatch2({ type: "INCREMENT" })}>
+      <p>Rohitcount: {state.rohitcount}</p>
+      <button onClick={() => dispatch({ type: "INCREMENTROHIT" })}>
         Increment Vote for Rohit
       </button>
-      <p>DhoniCount: {stateDhoni.count}</p>
-      <button onClick={() => dispatch3({ type: "INCREMENT" })}>
+      <p>DhoniCount: {state.dhonicount}</p>
+      <button onClick={() => dispatch({ type: "INCREMENTDHONI" })}>
         Increment Vote for Dhoni
       </button>
-     </div>
+    </div>
   );
 }
 

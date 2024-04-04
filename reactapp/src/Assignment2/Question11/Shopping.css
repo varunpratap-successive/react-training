@@ -1,0 +1,24 @@
+#cartid{
+  
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+#h1tagid
+{ display: flex;
+  flex-direction: column;
+  
+}
+#divid
+{ 
+  border:2px solid black;
+  width :100px;
+  margin:20px
+}
+#productlistid
+{
+  display:flex;
+  flex-direction: row;
+ }
+

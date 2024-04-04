@@ -5,45 +5,38 @@
 // Ensure that the useMemo hook has a dependency on the employee data so that it recalculates when the employee data changes.
 // Render the average salary on the screen.
 // Include a button that, when clicked, updates the employee data with new salaries.
+import React, { useMemo, useState } from "react";
+import "./EmpSalary.css";
 
-
-import React, { useMemo, useState } from 'react'
+const initialArray = [
+  { name: "Varun", salary: 25000 },
+  { name: "Tarun", salary: 40000 },
+  { name: "Dhoni", salary: 5000 },
+  { name: "Rohit", salary: 6000 },
+];
 
 function EmployeeSalary() {
   const [name1, setName1] = useState("");
   const [salary1, setSalary1] = useState("");
-  const [employeeArr, setEmployeeArr] = useState([{ name: "Varun", salary: 25000 },{ name: "Tarun", salary: 40000 }, { name: "Dhoni", salary: 5000 },
-  { name: "Rohit", salary: 6000 },
-  ]);
+  const [employeeArr, setEmployeeArr] = useState(initialArray);
 
   const modify = () => {
     const updatedArr = employeeArr.map((element, index) => {
-      if (element.name === name1) {
-        return { salary: Number(salary1) }; 
-      } else if (element.name !== name1 && index === employeeArr.length - 1) {
+      if (element.name === name1) return { salary: Number(salary1) };
+      if (index === employeeArr.length - 1)
         return { name: name1, salary: Number(salary1) };
-      } else return element; 
+      return element;
     });
 
     setEmployeeArr(updatedArr);
   };
 
   const avgSalary = useMemo(() => {
-    const average = employeeArr.reduce(
-      (acc,curr) => (acc += curr.salary),
-      0
-    );
+    const average = employeeArr.reduce((acc, curr) => (acc += curr.salary), 0);
     return average / employeeArr.length;
   }, [employeeArr]);
   return (
-    <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-     
-    }}
-    >
+    <div id="divsalary">
       <input
         type="text"
         placeholder="Enter Name"
@@ -57,11 +50,8 @@ function EmployeeSalary() {
       <button onClick={modify}>Add</button>
 
       <h3>AverageSalary:{avgSalary}</h3>
-
     </div>
   );
 }
 
-
-export default EmployeeSalary
-
+export default EmployeeSalary;

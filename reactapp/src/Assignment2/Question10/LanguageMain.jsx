@@ -14,11 +14,11 @@ function LanguageMain() {
   const { language } = useContext(LanguageContext);
 
   useEffect(() => {
-    const newArray = translations.filter(
+    const newArray = translations.find(
       (element) => language === element.language
     );
-    setData(newArray[0]);
-   
+
+    setData(newArray);
   }, [language]);
 
   return <>{data && <p>{data.content.para}</p>}</>;
