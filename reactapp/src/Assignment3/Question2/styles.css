@@ -1,0 +1,23 @@
+.dark, .light{
+    font-size: 1rem;
+    padding: 2rem;
+    width:40px;
+    margin: auto;
+    border: 5px solid red;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+ 
+}
+
+.light{
+    background-color: white;
+    color: dark;
+    display:flex;
+    flex-direction: column;
+}
