@@ -6,14 +6,14 @@
 // After 5 seconds, clear the message to hide the notification.
 
 import React, { useEffect, useState } from "react";
-
+const fiveSeconds = 5000;
 function Notification() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setMessage("");
-    }, 5000);
+    }, fiveSeconds);
 
     return () => clearTimeout(timer);
   }, [message]);

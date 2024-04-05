@@ -7,7 +7,7 @@ function Task({ index, element, updateTask }) {
       <div id="taskid">
         <p>{element.task}</p>
         <button id="btnid" onClick={() => updateTask(index)}>
-          {element.button}
+          {element.complete?"Complete":"Not complete"}
         </button>
       </div>
     </>

@@ -16,14 +16,10 @@ function CounterWitStep() {
     setStep(Number(event.target.value));
   };
   const increment = () => {
-    console.log(count);
     setCount(count + step);
-    console.log(count);
   };
   const decrement = () => {
-    console.log(count);
     setCount(count - step);
-    console.log(count);
   };
   const clearfunc = () => {
     setCount(1);

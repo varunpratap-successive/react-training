@@ -10,10 +10,10 @@ import Task from "./Task";
 import './Task.css'
 
 const taskArray = [
-  { task: "Task1",  button: "Complete " },
-  { task: "Task2",  button: "Complete " },
-  { task: "Task3",  button: "Complete " },
-  { task: "Task4",  button: "Complete " },
+  { task: "Task1",  complete:false},
+  { task: "Task2", complete:false },
+  { task: "Task3",  complete:false},
+  { task: "Task4",  complete:false},
 ];
 
 function Tasks() {
@@ -21,7 +21,7 @@ function Tasks() {
   const updateTask = useCallback(
     (index) => {
       const newArray = [...taskDone];
-      newArray[index].button = "Completed";
+      newArray[index].complete =true;
       setTaskDone(newArray);
     },
     [taskDone]
