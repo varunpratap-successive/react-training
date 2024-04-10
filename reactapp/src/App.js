@@ -2,7 +2,7 @@ import "./App.css";
 import Assignment1 from "./Assignment1/Assignment1";
 import Assignment2 from "./Assignment2/Assignment2";
 import Assignment3 from "./Assignment3/Assignment3";
-
+import Assignment4 from "./Assignment4/Assignment4";
 function App() {
   return (
     <>
@@ -18,6 +18,10 @@ function App() {
         <div id="ass3">
           <h1>Assignment3</h1>
           <Assignment3 />
+        </div>
+        <div id="ass3">
+          <h1>Assignment4</h1>
+          <Assignment4 />
         </div>
       </div>
     </>
