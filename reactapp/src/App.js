@@ -3,6 +3,8 @@ import Assignment1 from "./Assignment1/Assignment1";
 import Assignment2 from "./Assignment2/Assignment2";
 import Assignment3 from "./Assignment3/Assignment3";
 import Assignment4 from "./Assignment4/Assignment4";
+import Assignment5 from "./Assignment5/Assignment5";
+
 function App() {
   return (
     <>
@@ -22,6 +24,10 @@ function App() {
         <div id="ass3">
           <h1>Assignment4</h1>
           <Assignment4 />
+        </div>
+        <div id="ass5">
+          <h1>Assignment5</h1>
+          <Assignment5 />
         </div>
       </div>
     </>
