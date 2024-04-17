@@ -5,10 +5,8 @@
 import React from "react";
 import withLogger from "./withLogger";
 
-const CheckComponent = () => {
-  return <div>Checking Component</div>;
+const MyComponent = () => {
+  return <div>My component</div>;
 };
 
-const EnhancedComponent = withLogger(CheckComponent);
-
-export default EnhancedComponent;
+export default withLogger(MyComponent);
