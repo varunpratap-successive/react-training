@@ -9,7 +9,6 @@ import Pagination from "./Pagination";
 
 function FetchApp() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [recordsPerPage] = useState(10);
@@ -19,7 +18,6 @@ function FetchApp() {
       .get("https://jsonplaceholder.typicode.com/todos")
       .then((res) => {
         setData(res.data);
-        setLoading(false);
       })
       .catch(() => {
         alert("There was an error while retrieving the data");
