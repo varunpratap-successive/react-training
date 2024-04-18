@@ -1,0 +1,19 @@
+.ulclass {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  .divclass {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .divpageclass {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
