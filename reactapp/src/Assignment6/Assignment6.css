@@ -1,0 +1,26 @@
+#mainid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  padding: 20px;
+}
+.class1 {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 50px;
+  margin: 50px;
+  align-items: center;
+}
+
+#w4 {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 50px;
+  margin: 50px;
+  align-items: center;
+}
